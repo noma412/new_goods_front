@@ -1,92 +1,28 @@
-import React from 'react'
-import food from './assets/img/common/food.jpg'
-import './App.scss'
+import React, { useState } from 'react'
+import Lists from './components/Lists'
+import './assets/scss/App.scss'
 
 function App() {
+  const [name, setName] = useState<string>('')
+  const itemShow = (storeName: string) => {
+    if (name === storeName) return
+    setName(storeName)
+  }
   return (
     <div className="app">
       <h1>新商品</h1>
-      <ul className="food-list">
-        <li>
-          <a
-            href="https://www.lawson.co.jp/recommend/original/detail/1442823_1996.html"
-            target="_blank"
-            rel="noopener"
-          >
-            <img src={food} alt="" />
-          </a>
-          <p className="ttl">トスカーナお墨付き！生パスタミートソース</p>
-          <p className="kcal">660kcal</p>
-          <p className="price">
-            <span>450円</span>
-            <span>(税込)</span>
-          </p>
-          <p className="date">
-            <span>発売日</span>
-            <span>2021.11.02</span>
-          </p>
-        </li>
-        <li>
-          <a href="/recommend/original/detail/1442823_1996.html">
-            <img src={food} alt="" />
-          </a>
-          <p className="ttl">トスカーナお墨付き！生パスタミートソース</p>
-          <p className="kcal">660kcal</p>
-          <p className="price">
-            <span>450円</span>
-            <span>(税込)</span>
-          </p>
-          <p className="date">
-            <span>発売日</span>
-            <span>2021.11.02</span>
-          </p>
-        </li>
-        <li>
-          <a href="/recommend/original/detail/1442823_1996.html">
-            <img src={food} alt="" />
-          </a>
-          <p className="ttl">トスカーナお墨付き！生パスタミートソース</p>
-          <p className="kcal">660kcal</p>
-          <p className="price">
-            <span>450円</span>
-            <span>(税込)</span>
-          </p>
-          <p className="date">
-            <span>発売日</span>
-            <span>2021.11.02</span>
-          </p>
-        </li>
-        <li>
-          <a href="/recommend/original/detail/1442823_1996.html">
-            <img src={food} alt="" />
-          </a>
-          <p className="ttl">トスカーナお墨付き！生パスタミートソース</p>
-          <p className="kcal">660kcal</p>
-          <p className="price">
-            <span>450円</span>
-            <span>(税込)</span>
-          </p>
-          <p className="date">
-            <span>発売日</span>
-            <span>2021.11.02</span>
-          </p>
-        </li>
-        <li>
-          <a href="/recommend/original/detail/1442823_1996.html">
-            <img src={food} alt="" />
-          </a>
-          <p className="ttl">トスカーナお墨付き！生パスタミートソース</p>
-          <p className="kcal">660kcal</p>
-          <p className="price">
-            <span>450円</span>
-            <span>(税込)</span>
-          </p>
-          <p className="date">
-            <span>発売日</span>
-            <span>2021.11.02</span>
-          </p>
-        </li>
-      </ul>
+      <section className="btn-area">
+        {/* <button onClick={() => itemShow('7-Eleven')} className="7-Eleven">
+          セブンイレブン
+        </button> */}
+        <button onClick={() => itemShow('LAWSON')} className="lawson">
+          ローソン
+        </button>
+        <button onClick={() => itemShow('FamilyMart')} className="familymart">
+          ファミリーマート
+        </button>
+      </section>
+      <Lists name={name} />
     </div>
   )
 }
