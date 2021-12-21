@@ -27,10 +27,12 @@ const Lists = (props: typeProps) => {
   const [lists, setLists] = useState<data[]>()
   const [allPage, setAllPage] = useState(1)
   const [page, setPage] = useState(1)
+  console.log(process.env.NODE_ENV)
   const domain: string =
-    process.env.ENV === 'local'
-      ? 'localhost'
-      : 'https://3ld1dn462c.execute-api.ap-northeast-1.amazonaws.com/default'
+    //@ts-ignore
+    process.env.NODE_ENV === 'local'
+      ? 'http://localhost:3000'
+      : 'https://3ld1dn462c.execute-api.ap-northeast-1.amazonaws.com/'
   useEffect((): void => {
     if (!props.name) return
     pageEvent(1)
@@ -44,8 +46,9 @@ const Lists = (props: typeProps) => {
       top: 0,
     })
     fetch(
-      `${domain}/new-goods-get-prod-func?name=${props.name}&offset=${(num - 1) *
-        50}`,
+      `${domain}/default/new-goods-get-prod-func?name=${
+        props.name
+      }&offset=${(num - 1) * 50}`,
       {
         method: 'GET',
       }

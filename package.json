@@ -14,8 +14,8 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
-    "start:local": "cross-env ENV=local craco start",
-    "start:prod": "cross-env ENV=prod craco start",
+    "start:local": "cross-env NODE_ENV=local craco start",
+    "start:prod": "cross-env NODE_ENV=prod craco start",
     "build": "craco build",
     "test": "craco test"
   },
