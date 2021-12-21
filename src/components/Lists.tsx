@@ -22,8 +22,6 @@ type response = {
 }
 
 const Lists = (props: typeProps) => {
-  const [LAWSON, setLAWSON] = useState<data[]>()
-  const [FamilyMart, setFamilyMart] = useState<data[]>()
   const [lists, setLists] = useState<data[]>()
   const [allPage, setAllPage] = useState(1)
   const [page, setPage] = useState(1)
@@ -36,6 +34,7 @@ const Lists = (props: typeProps) => {
   useEffect((): void => {
     if (!props.name) return
     pageEvent(1)
+    // eslint-disable-next-line
   }, [props.name])
   const pageEvent = (num: number): void => {
     setPage(num)
@@ -59,14 +58,6 @@ const Lists = (props: typeProps) => {
       .then((res: response) => {
         setAllPage(Math.ceil(res.num / 50))
         setLists(res.data)
-        switch (props.name) {
-          case 'LAWSON':
-            setLAWSON(res.data)
-            break
-          case 'FamilyMart':
-            setFamilyMart(res.data)
-            break
-        }
       })
   }
   return (
