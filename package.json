@@ -17,7 +17,8 @@
     "start:local": "cross-env NODE_ENV=local craco start",
     "start:prod": "cross-env NODE_ENV=prod craco start",
     "build": "craco build",
-    "test": "craco test"
+    "test": "craco test",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
