@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/new_goods_front/static/css/main.69526b5c.chunk.css",
-    "main.js": "/new_goods_front/static/js/main.43ddf599.chunk.js",
-    "main.js.map": "/new_goods_front/static/js/main.43ddf599.chunk.js.map",
+    "main.css": "/new_goods_front/static/css/main.d1ad9ff6.chunk.css",
+    "main.js": "/new_goods_front/static/js/main.43d17a85.chunk.js",
+    "main.js.map": "/new_goods_front/static/js/main.43d17a85.chunk.js.map",
     "runtime-main.js": "/new_goods_front/static/js/runtime-main.87a332b4.js",
     "runtime-main.js.map": "/new_goods_front/static/js/runtime-main.87a332b4.js.map",
     "static/js/2.035891de.chunk.js": "/new_goods_front/static/js/2.035891de.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.a1490250.chunk.js": "/new_goods_front/static/js/3.a1490250.chunk.js",
     "static/js/3.a1490250.chunk.js.map": "/new_goods_front/static/js/3.a1490250.chunk.js.map",
     "index.html": "/new_goods_front/index.html",
-    "static/css/main.69526b5c.chunk.css.map": "/new_goods_front/static/css/main.69526b5c.chunk.css.map",
+    "static/css/main.d1ad9ff6.chunk.css.map": "/new_goods_front/static/css/main.d1ad9ff6.chunk.css.map",
     "static/js/2.035891de.chunk.js.LICENSE.txt": "/new_goods_front/static/js/2.035891de.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.87a332b4.js",
     "static/js/2.035891de.chunk.js",
-    "static/css/main.69526b5c.chunk.css",
-    "static/js/main.43ddf599.chunk.js"
+    "static/css/main.d1ad9ff6.chunk.css",
+    "static/js/main.43d17a85.chunk.js"
   ]
 }
