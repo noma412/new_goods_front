@@ -42,6 +42,14 @@
     .name {
       font-weight: bold;
     }
+    &.SEVEN-ELEVEN {
+      .img {
+        padding-top: 75%;
+      }
+      .name {
+        color: red;
+      }
+    }
     &.LAWSON {
       .img {
         padding-top: 77%;

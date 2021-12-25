@@ -25,7 +25,6 @@ const Lists = (props: typeProps) => {
   const [lists, setLists] = useState<data[]>()
   const [allPage, setAllPage] = useState(1)
   const [page, setPage] = useState(1)
-  console.log(process.env.NODE_ENV)
   const domain: string =
     //@ts-ignore
     process.env.NODE_ENV === 'local'
@@ -85,7 +84,7 @@ const Lists = (props: typeProps) => {
                 <p className="price">{list.price}</p>
                 <p className="date">
                   <span>更新日</span>
-                  <span>{list.date.substr(0, 10).replaceAll('-', '/')}</span>
+                  <span>{list.date.substring(0, 10).replaceAll('-', '/')}</span>
                 </p>
               </a>
             </li>

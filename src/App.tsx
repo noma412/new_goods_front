@@ -12,9 +12,12 @@ function App() {
     <div className="app">
       <h1>新商品</h1>
       <section className="btn-area">
-        {/* <button onClick={() => itemShow('7-Eleven')} className="7-Eleven">
+        <button
+          onClick={() => itemShow('SEVEN-ELEVEN')}
+          className="seven-eleven"
+        >
           セブンイレブン
-        </button> */}
+        </button>
         <button onClick={() => itemShow('LAWSON')} className="lawson">
           ローソン
         </button>
