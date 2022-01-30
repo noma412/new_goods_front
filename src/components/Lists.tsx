@@ -83,7 +83,7 @@ const Lists = (props: typeProps) => {
                 <p className="kcal">{list.kcal}</p>
                 <p className="price">{list.price}</p>
                 <p className="date">
-                  <span>発売日</span>
+                  <span>{list.release_date? '発売日' : '更新日'}</span>
                   <span>
                     {list.release_date?.substring(0, 10).replaceAll('-', '/') ||
                       list.date.substring(0, 10).replaceAll('-', '/')}
