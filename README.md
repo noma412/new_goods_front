@@ -21,3 +21,4 @@
 
 **● ウェブサイト**
 - https://noma412.github.io/new_goods_front/
+→ DBが止まっているため現在動きません。
